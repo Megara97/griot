@@ -1,0 +1,441 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.main.PlaceholderFragment">
+
+    <TextView
+        android:id="@+id/section_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_vertical_margin"
+        android:visibility="invisible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/constraintLayout"
+        tools:layout_constraintLeft_creator="1"
+        tools:layout_constraintTop_creator="1" />
+
+    <Button
+        android:id="@+id/actualizarm"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="65dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="30dp"
+        android:backgroundTintMode="add"
+        android:fontFamily="monospace"
+        android:onClick="Update"
+        android:textAllCaps="false"
+        app:icon="@android:drawable/ic_menu_view"
+        app:layout_constraintBottom_toTopOf="@+id/PBHA"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PBHS"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/PBT"
+        app:layout_constraintEnd_toStartOf="@+id/PBHA"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!-- /android:rotation="115"-->
+
+    <ProgressBar
+        android:id="@+id/PBHA"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="50"
+        android:progressDrawable="@drawable/circle"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/PBL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PBHS" />
+    <!-- "@style/Widget.AppCompat.ProgressBar" android:rotation="115"-->
+
+    <ProgressBar
+        android:id="@+id/PBT"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="40"
+        android:progress="35"
+        android:progressDrawable="@drawable/ring"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/PBV"
+        app:layout_constraintEnd_toStartOf="@+id/PBL"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PBL"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateOnly="false"
+        android:max="65535"
+        android:progress="10000"
+        android:progressDrawable="@drawable/ring"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/PBR"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PBT" />
+    <!--35000-->
+
+    <ProgressBar
+        android:id="@+id/PBV"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="70"
+        android:progress="1"
+        android:progressDrawable="@drawable/rueda"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/LP"
+        app:layout_constraintEnd_toStartOf="@+id/PBR"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/PBP"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="112.5dp"
+        android:layout_height="112.5dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="80dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="1050"
+        android:progress="800"
+        android:progressDrawable="@drawable/rueda"
+        android:rotation="180"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gota1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LR"
+        app:layout_constraintStart_toStartOf="parent" />
+    <!--1030-->
+
+    <ProgressBar
+        android:id="@+id/PBR"
+        style="@style/CircularDeterminateProgressBar2"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="false"
+        android:indeterminateOnly="false"
+        android:max="100"
+        android:progress="1"
+        android:progressDrawable="@drawable/lluvia"
+        android:rotation="180"
+        app:layout_constraintBottom_toTopOf="@+id/LP"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/PBV" />
+
+    <TextView
+        android:id="@+id/LHS"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Humedad del suelo"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/PBHS"
+        app:layout_constraintEnd_toEndOf="@+id/PBHS"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/PBHS" />
+
+    <TextView
+        android:id="@+id/LHA"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Humedad ambiental"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/PBHA"
+        app:layout_constraintEnd_toEndOf="@+id/PBHA"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/PBHA" />
+
+    <TextView
+        android:id="@+id/LT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Temperatura"
+        app:layout_constraintBottom_toBottomOf="@+id/PBT"
+        app:layout_constraintEnd_toEndOf="@+id/PBT"
+        app:layout_constraintStart_toStartOf="@+id/PBT" />
+
+    <TextView
+        android:id="@+id/LL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Luminosidad"
+        app:layout_constraintBottom_toBottomOf="@+id/PBL"
+        app:layout_constraintEnd_toEndOf="@+id/PBL"
+        app:layout_constraintStart_toStartOf="@+id/PBL" />
+
+    <TextView
+        android:id="@+id/LV"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Velocidad del viento"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/PBV"
+        app:layout_constraintEnd_toEndOf="@+id/PBV"
+        app:layout_constraintStart_toStartOf="@+id/PBV" />
+
+    <TextView
+        android:id="@+id/LP"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginBottom="80dp"
+        android:text="Presión atmosferica"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/LR"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-10dp"
+        android:text="Lluvia"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/PBR"
+        app:layout_constraintEnd_toEndOf="@+id/PBR"
+        app:layout_constraintStart_toStartOf="@+id/PBR" />
+
+    <TextView
+        android:id="@+id/LRiego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="-40dp"
+        android:text="Riego"
+        android:textAlignment="center"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/gota1"
+        app:layout_constraintEnd_toEndOf="@+id/gota1"
+        app:layout_constraintStart_toStartOf="@+id/gota1" />
+
+    <TextView
+        android:id="@+id/VHA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="@string/VHumedadA"
+        app:layout_constraintEnd_toEndOf="@+id/PBHA"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBHA"
+        app:layout_constraintTop_toTopOf="@+id/PBHA" />
+
+    <TextView
+        android:id="@+id/VHS"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="@string/VHumedadS"
+        app:layout_constraintEnd_toEndOf="@+id/PBHS"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBHS"
+        app:layout_constraintTop_toTopOf="@+id/PBHS" />
+
+    <TextView
+        android:id="@+id/VT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:hyphenationFrequency="normal"
+        android:text="@string/VTemperatura"
+        app:layout_constraintEnd_toEndOf="@+id/PBT"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBT"
+        app:layout_constraintTop_toTopOf="@+id/PBT" />
+
+    <TextView
+        android:id="@+id/VL"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:text="@string/VLuminosidad"
+        app:layout_constraintEnd_toEndOf="@+id/PBL"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBL"
+        app:layout_constraintTop_toTopOf="@+id/PBL" />
+
+    <TextView
+        android:id="@+id/VV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:hyphenationFrequency="normal"
+        android:text="@string/VViento"
+        app:layout_constraintEnd_toEndOf="@+id/PBV"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBV"
+        app:layout_constraintTop_toTopOf="@+id/PBV" />
+
+    <TextView
+        android:id="@+id/VP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="80dp"
+        android:hyphenationFrequency="normal"
+        android:text="@string/VPresion"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/LP" />
+
+    <TextView
+        android:id="@+id/VR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="55dp"
+        android:hyphenationFrequency="normal"
+        android:text="@string/VLluvia"
+        app:layout_constraintEnd_toEndOf="@+id/PBR"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/PBR"
+        app:layout_constraintTop_toTopOf="@+id/PBR" />
+
+    <TextView
+        android:id="@+id/VRiego"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:hyphenationFrequency="normal"
+        android:text="@string/VRiego"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@+id/gota1"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="@+id/gota1"
+        app:layout_constraintTop_toTopOf="@+id/gota1" />
+
+    <ImageButton
+        android:id="@+id/TiempoMuestreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_edit" />
+
+    <ImageButton
+        android:id="@+id/GuardarTiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="10dp"
+        android:textAlignment="center"
+        android:textSize="8sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@android:drawable/ic_menu_save" />
+
+    <ImageView
+        android:id="@+id/gota1"
+        android:layout_width="112.5dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="110dp"
+        android:src="@drawable/gota1"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/PBP" />
+
+    <ImageView
+        android:id="@+id/gota0"
+        android:layout_width="112.5dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="110dp"
+        android:src="@drawable/gota0"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/gota1" />
+
+    <TextView
+        android:id="@+id/textfecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="sans-serif-light"
+        android:text="--/--/---- --:--.--"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/PBHS"
+        app:layout_constraintEnd_toStartOf="@+id/actualizarm"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textmuestreo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Tiempo de muestreo:"
+        app:layout_constraintBottom_toTopOf="@+id/Tiempo"
+        app:layout_constraintEnd_toStartOf="@+id/TiempoMuestreo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Tiempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="minutos"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/textmuestreo" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/textmuestreo" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

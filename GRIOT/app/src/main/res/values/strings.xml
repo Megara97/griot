@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">GRIOT</string>
+    <string name="tab_text_1">Monitoreo</string>
+    <string name="tab_text_2">Historicos</string>
+    <string name="tab_text_3">Riego</string>
+    <string-array name="periodo_array">
+        <item>15 min</item>
+        <item>30 min</item>
+        <item>Hora</item>
+        <item>Día</item>
+        <item>Semana</item>
+        <item>Mes</item>
+    </string-array>
+    <string-array name="variables_array">
+        <item>Humedad del suelo</item>
+        <item>Humedad ambiental</item>
+        <item>Temperatura</item>
+        <item>Luminosidad</item>
+        <item>Velocidad del viento</item>
+        <item>Presión atmosferica</item>
+        <item>Lluvia</item>
+        <item>Riego</item>
+    </string-array>
+    <string name="Muestreo">--</string>
+    <string name="VHumedadS">%</string>
+    <string name="VHumedadA">%</string>
+    <string name="VTemperatura">°C</string>
+    <string name="VLuminosidad">lx</string>
+    <string name="VViento">m/s</string>
+    <string name="VPresion">hPa</string>
+    <string name="VLluvia">%</string>
+    <string name="VRiego">Apagado</string>
+    <string name="Tolerancia">%</string>
+    />
+</resources>
