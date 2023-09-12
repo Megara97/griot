@@ -72,38 +72,13 @@ void setup() {
 }
 
 void loop() {
-  //Serial.println("Esperando...");
   if (mySerial.available()>0) {
     Serial.println("Mensaje recibido:");
     dato= mySerial.readString();
     parpadea(LedEscritura,1);
     Serial.print(dato);
-    /*
-    StaticJsonDocument <256> doc;
-    deserializeJson(doc, dato);
-    Serial.flush();
-    
-    t = doc ["T"];
-    h = doc ["HA"];
-    moisp = doc ["HS"];
-    lux = doc ["L"];
-    pres = doc ["P"];
-    v = doc ["V"];
-    rainp = doc ["R"];
-    */
     
     myRTC.updateTime();
-    //Serial.print(myRTC.dayofmonth); 
-    //Serial.print("/");
-    //Serial.print(myRTC.month);
-    //Serial.print("/");
-    //Serial.print(myRTC.year);
-    //Serial.print(" ");
-    //Serial.print(myRTC.hours);
-    //Serial.print(":");
-    //Serial.print(myRTC.minutes);
-    //Serial.print(":");
-    //Serial.println(myRTC.seconds);
     
     Fecha=String(myRTC.year);
     if ((myRTC.month)<10){Fecha=Fecha+"0"+String(myRTC.month);}
@@ -124,21 +99,6 @@ void loop() {
       myFile.print(Fecha);
       myFile.print(",");
       myFile.print(dato);
-      /*
-      myFile.print(t);
-      myFile.print(",");
-      myFile.print(h);
-      myFile.print(",");
-      myFile.print(moisp);
-      myFile.print(",");
-      myFile.print(lux);
-      myFile.print(",");
-      myFile.print(pres);
-      myFile.print(",");
-      myFile.print(v);
-      myFile.print(",");
-      myFile.print(rainp);
-      myFile.print("\n");*/
       myFile.close(); 
       parpadea(LedEscritura,2);
     } else {
